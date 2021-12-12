@@ -37,8 +37,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         boton02 = new javax.swing.JButton();
         boton03 = new javax.swing.JButton();
         boton00 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        BotonSuma = new javax.swing.JButton();
         botonIgual = new javax.swing.JButton();
+        BotonDelete = new javax.swing.JButton();
+        BotonDivision = new javax.swing.JButton();
+        BotonResta = new javax.swing.JButton();
+        BotonMultiplicacion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -141,14 +145,14 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(boton00, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 64, 64));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jButton1.setText("+");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonSuma.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        BotonSuma.setText("+");
+        BotonSuma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonSumaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 96, 64, 64));
+        getContentPane().add(BotonSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 64, 64));
 
         botonIgual.setFont(new java.awt.Font("Tahoma", 0, 37)); // NOI18N
         botonIgual.setText("=");
@@ -158,6 +162,41 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botonIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 100, 64));
+
+        BotonDelete.setText("C");
+        BotonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonDeleteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 40, 40));
+
+        BotonDivision.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        BotonDivision.setText("÷");
+        BotonDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonDivisionbotonSumaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonDivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 64, 64));
+
+        BotonResta.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        BotonResta.setText("-");
+        BotonResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 64, 64));
+
+        BotonMultiplicacion.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        BotonMultiplicacion.setText("X");
+        BotonMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMultiplicacionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 64, 64));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,9 +304,45 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         if (operacion.equals("+")){
             operando1 = operando1 + operando2;
         }
-        
+        if (operacion.equals("-")){
+            operando1 = operando1 - operando2;
+        }
+        if (operacion.equals("x")){
+            operando1 = operando1 * operando2;
+        }
+        if (operacion.equals("÷")){
+            operando1 = operando1 / operando2;
+        }
         pantalla.setText(""+operando1);
     }//GEN-LAST:event_botonIgualActionPerformed
+
+    private void BotonDivisionbotonSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDivisionbotonSumaActionPerformed
+        operacion = "÷";
+        //Double.valueof convierte un string en su equivalente numerico
+        operando1 = Double.valueOf(pantalla.getText());
+        //Reseteo la pantalla
+        pantalla.setText("0"); 
+    }//GEN-LAST:event_BotonDivisionbotonSumaActionPerformed
+
+    private void BotonRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestaActionPerformed
+        operacion = "-";
+        //Double.valueof convierte un string en su equivalente numerico
+        operando1 = Double.valueOf(pantalla.getText());
+        //Reseteo la pantalla
+        pantalla.setText("0"); 
+    }//GEN-LAST:event_BotonRestaActionPerformed
+
+    private void BotonMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMultiplicacionActionPerformed
+        operacion = "x";
+        //Double.valueof convierte un string en su equivalente numerico
+        operando1 = Double.valueOf(pantalla.getText());
+        //Reseteo la pantalla
+        pantalla.setText("0"); 
+    }//GEN-LAST:event_BotonMultiplicacionActionPerformed
+
+    private void BotonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDeleteActionPerformed
+        pantalla.setText("0");
+    }//GEN-LAST:event_BotonDeleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,6 +380,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonDelete;
+    private javax.swing.JButton BotonDivision;
+    private javax.swing.JButton BotonMultiplicacion;
+    private javax.swing.JButton BotonResta;
+    private javax.swing.JButton BotonSuma;
     private javax.swing.JButton boton00;
     private javax.swing.JButton boton01;
     private javax.swing.JButton boton02;
@@ -316,7 +396,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton boton08;
     private javax.swing.JButton boton09;
     private javax.swing.JButton botonIgual;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel pantalla;
     // End of variables declaration//GEN-END:variables
 }
