@@ -9,14 +9,13 @@ package codigo;
  * @author David
  */
 public class VentanaCalculadora extends javax.swing.JFrame {
-    
- 
+
     public static final double e = 2.7; //Número Euler
     public static final double π = 3.14; //Número pi
-    
+
     double operando1 = 0; //Guarda el primer número que metamos
     String operacion = ""; //Guarda la operación pulsada
-    
+
     public VentanaCalculadora() {
         initComponents();
     }
@@ -130,7 +129,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 boton01ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton01, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 64, 64));
+        getContentPane().add(boton01, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 64, 64));
 
         boton02.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         boton02.setText("2");
@@ -139,7 +138,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 boton02ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton02, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 64, 64));
+        getContentPane().add(boton02, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 64, 64));
 
         boton03.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         boton03.setText("3");
@@ -148,7 +147,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 boton03ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton03, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 64, 64));
+        getContentPane().add(boton03, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 64, 64));
 
         boton00.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         boton00.setText("0");
@@ -157,7 +156,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 boton00ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton00, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 64, 64));
+        getContentPane().add(boton00, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 64, 64));
 
         BotonSuma.setBackground(new java.awt.Color(153, 153, 153));
         BotonSuma.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -177,7 +176,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 botonIgualActionPerformed(evt);
             }
         });
-        getContentPane().add(botonIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 130, 64));
+        getContentPane().add(botonIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 130, 64));
 
         BotonPi.setBackground(new java.awt.Color(204, 204, 204));
         BotonPi.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -290,6 +289,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPotencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 64, 64));
 
+        BotonDelete.setBackground(new java.awt.Color(204, 255, 255));
         BotonDelete.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonDelete.setText("C");
         BotonDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -448,7 +448,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         //Double.valueof convierte un string en su equivalente numerico
         operando1 = Double.valueOf(pantalla.getText());
         //Reseteo la pantalla
-        pantalla.setText("0");        
+        pantalla.setText("0");
     }//GEN-LAST:event_BotonDivisionActionPerformed
 
     private void BotonRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestaActionPerformed
@@ -456,7 +456,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         //Double.valueof convierte un string en su equivalente numerico
         operando1 = Double.valueOf(pantalla.getText());
         //Reseteo la pantalla
-        pantalla.setText("0");        
+        pantalla.setText("0");
     }//GEN-LAST:event_BotonRestaActionPerformed
 
     private void BotonPiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPiActionPerformed
@@ -480,7 +480,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         operando1 = Double.valueOf(pantalla.getText());
         operando1 = Math.log10(operando1); //Logaritmo
         pantalla.setText("" + operando1);
-        
+
     }//GEN-LAST:event_BotonLogaritmoActionPerformed
 
     private void BotonPotenciaCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPotenciaCuadradaActionPerformed
@@ -497,7 +497,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
 
     private void BotonInvertidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInvertidoActionPerformed
         operando1 = Double.valueOf(pantalla.getText());
-        operando1 = 1/operando1;
+        operando1 = 1 / operando1;
         pantalla.setText("" + operando1);
     }//GEN-LAST:event_BotonInvertidoActionPerformed
 
@@ -537,7 +537,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonPuntoActionPerformed
 
     private void BotonEulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEulerActionPerformed
-               String auxiliar = pantalla.getText();
+        String auxiliar = pantalla.getText();
         if (auxiliar.equals("0")) {
             pantalla.setText("" + e);
         } else {
