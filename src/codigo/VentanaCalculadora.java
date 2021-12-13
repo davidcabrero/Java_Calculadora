@@ -159,6 +159,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(boton00, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 64, 64));
 
+        BotonSuma.setBackground(new java.awt.Color(153, 153, 153));
         BotonSuma.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         BotonSuma.setText("+");
         BotonSuma.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +169,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 64, 64));
 
+        botonIgual.setBackground(new java.awt.Color(153, 153, 153));
         botonIgual.setFont(new java.awt.Font("Tahoma", 0, 37)); // NOI18N
         botonIgual.setText("=");
         botonIgual.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +179,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(botonIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 130, 64));
 
+        BotonPi.setBackground(new java.awt.Color(204, 204, 204));
         BotonPi.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonPi.setText("π");
         BotonPi.addActionListener(new java.awt.event.ActionListener() {
@@ -186,6 +189,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPi, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 64, 30));
 
+        BotonDivision.setBackground(new java.awt.Color(153, 153, 153));
         BotonDivision.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         BotonDivision.setText("÷");
         BotonDivision.addActionListener(new java.awt.event.ActionListener() {
@@ -195,8 +199,10 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonDivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 64, 64));
 
+        BotonResta.setBackground(new java.awt.Color(153, 153, 153));
         BotonResta.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         BotonResta.setText("-");
+        BotonResta.setOpaque(false);
         BotonResta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonRestaActionPerformed(evt);
@@ -204,6 +210,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 64, 64));
 
+        BotonMultiplicacion.setBackground(new java.awt.Color(153, 153, 153));
         BotonMultiplicacion.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         BotonMultiplicacion.setText("X");
         BotonMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +220,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 64, 64));
 
+        BotonLogaritmo.setBackground(new java.awt.Color(153, 153, 153));
         BotonLogaritmo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BotonLogaritmo.setText("log");
         BotonLogaritmo.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +230,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonLogaritmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 64, 64));
 
+        BotonPotenciaCuadrada.setBackground(new java.awt.Color(153, 153, 153));
         BotonPotenciaCuadrada.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonPotenciaCuadrada.setText("x²");
         BotonPotenciaCuadrada.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +240,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPotenciaCuadrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 64, 64));
 
+        BotonRaizCuadrada.setBackground(new java.awt.Color(153, 153, 153));
         BotonRaizCuadrada.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         BotonRaizCuadrada.setText("√");
         BotonRaizCuadrada.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +250,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonRaizCuadrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 64, 64));
 
+        BotonInvertido.setBackground(new java.awt.Color(153, 153, 153));
         BotonInvertido.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BotonInvertido.setText("1/x");
         BotonInvertido.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +260,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 64, 64));
 
+        BotonPorcentaje.setBackground(new java.awt.Color(153, 153, 153));
         BotonPorcentaje.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         BotonPorcentaje.setText("mod");
         BotonPorcentaje.addActionListener(new java.awt.event.ActionListener() {
@@ -258,6 +270,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 64, 64));
 
+        BotonPorMenosUno.setBackground(new java.awt.Color(153, 153, 153));
         BotonPorMenosUno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BotonPorMenosUno.setText("+/-");
         BotonPorMenosUno.addActionListener(new java.awt.event.ActionListener() {
@@ -267,6 +280,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPorMenosUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 64, 64));
 
+        BotonPotencia.setBackground(new java.awt.Color(153, 153, 153));
         BotonPotencia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BotonPotencia.setText("x^y");
         BotonPotencia.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +299,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 64, 64));
 
+        BotonPunto.setBackground(new java.awt.Color(204, 204, 204));
         BotonPunto.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonPunto.setText(".");
         BotonPunto.addActionListener(new java.awt.event.ActionListener() {
@@ -294,6 +309,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 64, 30));
 
+        BotonEuler.setBackground(new java.awt.Color(204, 204, 204));
         BotonEuler.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonEuler.setText("e");
         BotonEuler.addActionListener(new java.awt.event.ActionListener() {
