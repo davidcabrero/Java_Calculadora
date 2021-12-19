@@ -50,7 +50,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         BotonPotenciaCuadrada = new javax.swing.JButton();
         BotonRaizCuadrada = new javax.swing.JButton();
         BotonInvertido = new javax.swing.JButton();
-        BotonPorcentaje = new javax.swing.JButton();
+        BotonResto = new javax.swing.JButton();
         BotonPorMenosUno = new javax.swing.JButton();
         BotonPotencia = new javax.swing.JButton();
         BotonDelete = new javax.swing.JButton();
@@ -259,15 +259,15 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         getContentPane().add(BotonInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 64, 64));
 
-        BotonPorcentaje.setBackground(new java.awt.Color(153, 153, 153));
-        BotonPorcentaje.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BotonPorcentaje.setText("mod");
-        BotonPorcentaje.addActionListener(new java.awt.event.ActionListener() {
+        BotonResto.setBackground(new java.awt.Color(153, 153, 153));
+        BotonResto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonResto.setText("mod");
+        BotonResto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonPorcentajeActionPerformed(evt);
+                BotonRestoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 64, 64));
+        getContentPane().add(BotonResto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 64, 64));
 
         BotonPorMenosUno.setBackground(new java.awt.Color(153, 153, 153));
         BotonPorMenosUno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -501,13 +501,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         pantalla.setText("" + operando1);
     }//GEN-LAST:event_BotonInvertidoActionPerformed
 
-    private void BotonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPorcentajeActionPerformed
+    private void BotonRestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestoActionPerformed
         operacion = "mod";
         //Double.valueof convierte un string en su equivalente numerico
         operando1 = Double.valueOf(pantalla.getText());
         //Reseteo la pantalla
         pantalla.setText("0");
-    }//GEN-LAST:event_BotonPorcentajeActionPerformed
+    }//GEN-LAST:event_BotonRestoActionPerformed
 
     private void BotonPorMenosUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPorMenosUnoActionPerformed
         operando1 = Double.valueOf(pantalla.getText());
@@ -589,12 +589,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton BotonMultiplicacion;
     private javax.swing.JButton BotonPi;
     private javax.swing.JButton BotonPorMenosUno;
-    private javax.swing.JButton BotonPorcentaje;
     private javax.swing.JButton BotonPotencia;
     private javax.swing.JButton BotonPotenciaCuadrada;
     private javax.swing.JButton BotonPunto;
     private javax.swing.JButton BotonRaizCuadrada;
     private javax.swing.JButton BotonResta;
+    private javax.swing.JButton BotonResto;
     private javax.swing.JButton BotonSuma;
     private javax.swing.JButton boton00;
     private javax.swing.JButton boton01;
