@@ -6,7 +6,7 @@ package codigo;
 
 /**
  *
- * @author David
+ * @author David Cabrero Jiménez
  */
 public class VentanaCalculadora extends javax.swing.JFrame {
 
